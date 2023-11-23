@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,6 @@
     <h1>NOMBRE ENREGISTRAT</h1>
     <?php
 
-        session_start();
         $_SESSION["ocult"]=$_POST["ocult"];
 
 

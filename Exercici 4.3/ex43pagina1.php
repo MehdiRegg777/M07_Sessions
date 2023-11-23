@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +36,7 @@
 <h1>Màquina D'escriure</h1>
 <form action="" method="get">
 <?php
-    session_start();
+    
 
    
 

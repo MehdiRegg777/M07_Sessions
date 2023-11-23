@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
     
 
     <?php
-        session_start();
+
 
         if (!isset($_SESSION["historial"])) {
             $_SESSION["historial"] = array(); // Inicializa el historial como un arreglo vacío si no existe
@@ -58,10 +61,14 @@
                 echo "<h3>Felicitats</h3>";
                 echo "<a href='ex41pagina1.php'>Tornar a l'inici</a>";
                 session_destroy();
-            } elseif ($_POST['endevina'] > $_SESSION['oculta']) {
+            } elseif ($_POST['endevina'] > $_SESSION['ocult']) {
                 echo "<h3>El número que estás buscando es menor</h3>";
                 formulari();
+            } elseif ($_POST['endevina'] < $_SESSION['ocult']) {
+                echo "<h3>El número que estás buscando es mayor</h3>";
+                formulari();
             }
+            
         }
 ?>
 

@@ -25,8 +25,7 @@ session_start();
             $_SESSION["intentos"] = $numeroIntentos; // Inicializa el número de intentos si no existe
         }
 
-        function formulari()
-        {
+        function formulari() {
 
             echo "<form method='POST'>";
             echo "<input type='number' name='endevina'>";
